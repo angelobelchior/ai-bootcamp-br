@@ -69,10 +69,7 @@
                     <hr />
                     <div class="row">
                         <div class="contentLead">
-
-                            <h1><span>AI</span> Bootcamp Venues 2018</h1>
-
-                            <h4 style="margin-top: 22px;">62 venues worldwide</h4>
+                            <h1>Locais dos Eventos</h1>
                         </div>
                     </div>
 
@@ -80,13 +77,13 @@
                         <div style="border-top: 2px solid #e64614;border-bottom:2px solid #e64614">
                             <div id='map' style='width: 100%; height: 600px'></div>
                             <script>
-                                mapboxgl.accessToken = 'pk.eyJ1IjoiaGJvZWxtYW4iLCJhIjoiY2pvNGVnazZ4MDFidDNrbjltNHQyNjNwNyJ9.10DI69I-FYS5__YwR95bhQ';
+                                mapboxgl.accessToken = 'pk.eyJ1IjoiYW5nZWxvYmVsY2hpb3IiLCJhIjoiY2pvbnJleGJuMGZodTNwbjFyb3czbHh0NSJ9.19dxVQqYf-FCMq_MoBrkUg';
                                 var map = new mapboxgl.Map({
                                     container: 'map',
-                                    style: 'mapbox://styles/mapbox/streets-v10',
-                                    center: [25, 20],
-                                    zoom: 1.25
+                                    style: 'mapbox://styles/mapbox/basic-v9',
+                                    zoom: 3
                                 });
+                                map.addControl(new mapboxgl.NavigationControl());
                             </script>
                         </div>
 
@@ -94,26 +91,22 @@
                         <div class="body">
                             <div class="event-item">
                                 <div class="frame">
-                                    <h2 style="font-size: 32px;"><a href="/bootcamp/6c701b9d-9516-463b-b6e1-4c2e92aeb83d">Brasil
-                                            - Rio de Janeiro </a></h2>
+                                    <h2 style="font-size: 32px;">
+                                        <a href="/bootcamp/6c701b9d-9516-463b-b6e1-4c2e92aeb83d">Rio de Janeiro</a>
+                                    </h2>
                                     <span class="meta">
-                                        Organized by: <a href="/bootcamp/6c701b9d-9516-463b-b6e1-4c2e92aeb83d">MS-InfraRio</a>
-                                        | Hosted by: <a href="/bootcamp/6c701b9d-9516-463b-b6e1-4c2e92aeb83d">Infnet</a>
-                                    </span>
-                                    <span class="meta" style="padding-top: 10px;">
-                                        <em><strong>This location is also hosting a Global MR Bootcamp.</strong></em>
+                                        Organizado por: <a href="/bootcamp/6c701b9d-9516-463b-b6e1-4c2e92aeb83d">MS-InfraRio</a> | Local: <a href="/bootcamp/6c701b9d-9516-463b-b6e1-4c2e92aeb83d">Infnet</a>
                                     </span>
                                 </div>
                                 <a href="/bootcamp/6c701b9d-9516-463b-b6e1-4c2e92aeb83d" class="more"><i class="fa fa-angle-right"></i></a>
                             </div>
+
                             <div class="event-item">
                                 <div class="frame">
-                                    <h2 style="font-size: 32px;"><a href="/bootcamp/7963ca9f-6e72-47a5-ad80-e1d94f3d3a5f">Brasil
-                                            - Sao Paulo </a></h2>
+                                    <h2 style="font-size: 32px;">
+                                        <a href="/bootcamp/7963ca9f-6e72-47a5-ad80-e1d94f3d3a5f">São Paulo </a></h2>
                                     <span class="meta">
-                                        Organized by: <a href="/bootcamp/7963ca9f-6e72-47a5-ad80-e1d94f3d3a5f">Meetup
-                                            DeveloperBR </a> | Hosted by: <a href="/bootcamp/7963ca9f-6e72-47a5-ad80-e1d94f3d3a5f">Microsoft
-                                            Brasil - Sao Paulo</a>
+                                            Organizado por: <a href="/bootcamp/7963ca9f-6e72-47a5-ad80-e1d94f3d3a5f">DeveloperBR </a> | Local: <a href="/bootcamp/7963ca9f-6e72-47a5-ad80-e1d94f3d3a5f">Microsoft Brasil - São Paulo</a>
                                     </span>
                                 </div>
                                 <a href="/bootcamp/7963ca9f-6e72-47a5-ad80-e1d94f3d3a5f" class="more"><i class="fa fa-angle-right"></i></a>
@@ -213,7 +206,8 @@
                     </div>
 
                     <div class="col col-md-4">
-                        <a href="https://www.meetup.com/pt-BR/DevelopersBR/"><img src="img/developers-br.jpeg" alt="Developers Br" class="img-responsive" /></a>
+                        <a href="https://www.meetup.com/pt-BR/DevelopersBR/"><img src="img/developers-br.jpeg" alt="Developers Br"
+                                class="img-responsive" /></a>
                     </div>
                     <div class="col col-md-4">
                         <a href="https://www.mixug.nl"><img src="img/Mixug.png" class="img-responsive" /></a>
