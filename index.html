@@ -1,11 +1,248 @@
+<!DOCTYPE html>
 <html>
 
 <head>
-    <title>AI Bootcamp Br</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Bootcamp Brasil</title>
+    <meta name="description" content="O AI Bootcamp Brasil é um evento gratuito de um dia organizado por comunidades locais que são apaixonadas por Inteligência Artificial na stack da Microsoft.">
+    <link media="all" rel="stylesheet" href="css/main.css">
+    <link media="all" rel="stylesheet" href="css/jquery.mCustomScrollbar.css">
+
+    <script src='https://api.mapbox.com/mapbox-gl-js/v0.50.0/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v0.50.0/mapbox-gl.css' rel='stylesheet' />
 </head>
 
 <body>
-        AI Bootcamp Br
+    <div id="wrapper">
+
+        <header id="header">
+            <a href="/" class="logo">
+                <img src="img/logoai.png" alt="AI Bootcamp Brasil">
+            </a>
+        </header>
+
+        <div style="background-color: #fff; padding-bottom: 20px;">
+            <div class="container">
+                <img src="img/background.png" alt="image description">
+            </div>
+        </div>
+
+        <main id="main">
+            <div class="container" style="padding-top: 50px;">
+                <div class="row">
+                    <div class="col-lg-10 col-lg-push-1">
+                        <div class="contentLead">
+                            <p>
+                                <strong>
+                                    The Global AI bootcamp is a free one-day event organized by local communities all
+                                    over the world that
+                                    are passionate about Artificial Intelligence on the Microsoft stack.
+                                </strong>
+                            </p>
+                            <p>
+                                The event takes place on the <strong>15th of December</strong> on venues all over the
+                                world centrally organized by our HQ in the Netherlands, supported by
+                                Microsoft. The event is the perfect balance between quality content, awesome lectures,
+                                getting your hands dirty and learn & share with other community members.
+                            </p>
+
+                            <p>
+                                Dive in and learn how to implement intelligence into your solutions with the Microsoft
+                                AI platform,
+                                including pre-trained AI services like Cognitive Services and Bot Framework, as well as
+                                deep learning tools
+                                like Azure Machine Learning, Visual Studio Code Tools for AI, and Cognitive Toolkit.
+                            </p>
+                            <p>
+                                During this AI bootcamp you will get inspired through sessions and get your hands dirty
+                                during the workshops. By the
+                                end of the day you will be able to infuse AI into your applications.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <hr />
+                    <div class="row">
+                        <div class="contentLead">
+
+                            <h1><span>AI</span> Bootcamp Venues 2018</h1>
+
+                            <h4 style="margin-top: 22px;">62 venues worldwide</h4>
+                        </div>
+                    </div>
+
+                    <section class="calendar">
+                        <div style="border-top: 2px solid #e64614;border-bottom:2px solid #e64614">
+                            <div id='map' style='width: 100%; height: 600px'></div>
+                            <script>
+                                mapboxgl.accessToken = 'pk.eyJ1IjoiaGJvZWxtYW4iLCJhIjoiY2pvNGVnazZ4MDFidDNrbjltNHQyNjNwNyJ9.10DI69I-FYS5__YwR95bhQ';
+                                var map = new mapboxgl.Map({
+                                    container: 'map',
+                                    style: 'mapbox://styles/mapbox/streets-v10',
+                                    center: [25, 20],
+                                    zoom: 1.25
+                                });
+                            </script>
+                        </div>
+
+
+                        <div class="body">
+                            <div class="event-item">
+                                <div class="frame">
+                                    <h2 style="font-size: 32px;"><a href="/bootcamp/6c701b9d-9516-463b-b6e1-4c2e92aeb83d">Brasil
+                                            - Rio de Janeiro </a></h2>
+                                    <span class="meta">
+                                        Organized by: <a href="/bootcamp/6c701b9d-9516-463b-b6e1-4c2e92aeb83d">MS-InfraRio</a>
+                                        | Hosted by: <a href="/bootcamp/6c701b9d-9516-463b-b6e1-4c2e92aeb83d">Infnet</a>
+                                    </span>
+                                    <span class="meta" style="padding-top: 10px;">
+                                        <em><strong>This location is also hosting a Global MR Bootcamp.</strong></em>
+                                    </span>
+                                </div>
+                                <a href="/bootcamp/6c701b9d-9516-463b-b6e1-4c2e92aeb83d" class="more"><i class="fa fa-angle-right"></i></a>
+                            </div>
+                            <div class="event-item">
+                                <div class="frame">
+                                    <h2 style="font-size: 32px;"><a href="/bootcamp/7963ca9f-6e72-47a5-ad80-e1d94f3d3a5f">Brasil
+                                            - Sao Paulo </a></h2>
+                                    <span class="meta">
+                                        Organized by: <a href="/bootcamp/7963ca9f-6e72-47a5-ad80-e1d94f3d3a5f">Meetup
+                                            DeveloperBR </a> | Hosted by: <a href="/bootcamp/7963ca9f-6e72-47a5-ad80-e1d94f3d3a5f">Microsoft
+                                            Brasil - Sao Paulo</a>
+                                    </span>
+                                </div>
+                                <a href="/bootcamp/7963ca9f-6e72-47a5-ad80-e1d94f3d3a5f" class="more"><i class="fa fa-angle-right"></i></a>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+        </main>
+
+        <script>
+            map.on('load', function () {
+                // Add a layer showing the places.
+                map.loadImage(
+                    'https://ai-bootcamp-br.azurewebsites.net/img/pin.png',
+                    function (error, image) {
+                        if (error) throw error;
+                        map.addImage('cat', image);
+                        map.addLayer({
+                            "id": "places",
+                            "type": "symbol",
+                            "source": {
+                                "type": "geojson",
+                                "data": {
+                                    "type": "FeatureCollection",
+                                    "features": [
+                                        {
+                                            "type": "Feature",
+                                            "properties": {
+                                                "description": "<strong>Brasil - Rio de Janeiro</strong><p>Global AI/MR bootcamp location<br/><a href='https://www.globalaibootcamp.com/bootcamp/6c701b9d-9516-463b-b6e1-4c2e92aeb83d'>Mais detalhes</a></p>"
+                                            },
+                                            "geometry": {
+                                                "type": "Point",
+                                                "coordinates": [-43.1790071, -22.9060737]
+                                            }
+                                        },
+
+                                        {
+                                            "type": "Feature",
+                                            "properties": {
+                                                "description": "<strong>Brasil - Sao Paulo</strong><p>Global AI bootcamp location<br/><a href='https://www.globalaibootcamp.com/bootcamp/7963ca9f-6e72-47a5-ad80-e1d94f3d3a5f'>Mais detalhes</a></p>"
+                                            },
+                                            "geometry": {
+                                                "type": "Point",
+                                                "coordinates": [-46.697287, -23.608901]
+                                            }
+                                        },
+                                    ]
+                                }
+                            },
+                            "layout": {
+                                "icon-image": "cat",
+                                "icon-allow-overlap": true,
+                                "icon-size": 0.5
+                            }
+                        })
+                    });
+                // When a click event occurs on a feature in the places layer, open a popup at the
+                // location of the feature, with description HTML from its properties.
+                map.on('click', 'places', function (e) {
+                    var coordinates = e.features[0].geometry.coordinates.slice();
+                    var description = e.features[0].properties.description;
+
+                    // Ensure that if the map is zoomed out such that multiple
+                    // copies of the feature are visible, the popup appears
+                    // over the copy being pointed to.
+                    while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
+                        coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
+                    }
+
+                    new mapboxgl.Popup()
+                        .setLngLat(coordinates)
+                        .setHTML(description)
+                        .addTo(map);
+                });
+
+                // Change the cursor to a pointer when the mouse is over the places layer.
+                map.on('mouseenter', 'places', function () {
+                    map.getCanvas().style.cursor = 'pointer';
+                });
+
+                // Change it back to a pointer when it leaves.
+                map.on('mouseleave', 'places', function () {
+                    map.getCanvas().style.cursor = '';
+                });
+            });
+
+
+
+        </script>
+
+        <footer id="footer">
+            <div class="container">
+                <br />
+                <div class="row">
+                    <div class="col col-md-12 text-center" style="margin-bottom: 22px;">
+                        <h3>Comunidades que organizam o AI Bootcamp Brasil:</h3>
+                    </div>
+
+                    <div class="col col-md-4">
+                        <a href="https://www.meetup.com/pt-BR/DevelopersBR/"><img src="img/developers-br.jpeg" alt="Developers Br" class="img-responsive" /></a>
+                    </div>
+                    <div class="col col-md-4">
+                        <a href="https://www.mixug.nl"><img src="img/Mixug.png" class="img-responsive" /></a>
+                    </div>
+                    <div class="col col-md-4">
+                        <a href="https://aischool.microsoft.com"><img src="img/microsoft_ai_school_logo.png" class="img-responsive" /></a>
+                    </div>
+                </div>
+
+                <hr />
+                <ul class="footer-nav">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/organizers">Organizers</a></li>
+                    <li><a href="/sponsors">Sponsors</a></li>
+                    <li><a href="/about">About</a></li>
+                    <li><a href="/contact">Contact</a></li>
+                </ul>
+                <div class="right">
+                    <a href="http://eepurl.com/dqsca9" class="btn">SUBSCRIBE</a>
+                    <a href="/contact" class="btn btn-secondary">CONTACT US</a>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="js/jquery-1.11.2.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="https://use.fontawesome.com/3272ab6501.js"></script>
+
 </body>
 
 </html>
