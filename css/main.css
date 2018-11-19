@@ -1,4 +1,7 @@
-@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);@import url(https://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900,900italic);/*!
+@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900,900italic);
+@import url(https://fonts.googleapis.com/css?family=Archivo);
+/*!
  * Bootstrap v4.0.0-alpha.2 (http://getbootstrap.com)
  * Copyright 2011-2015 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
@@ -6,15 +9,22 @@
 
  /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
 
-@font-face {
+/* @font-face {
     font-family: 'American-Captain';
     src: url('fonts/American-Captain.ttf.woff') format('woff'), url('fonts/American-Captain.ttf.svg#American-Captain') format('svg'), url('fonts/American-Captain.ttf.eot'), url('fonts/American-Captain.eot?#iefix') format('embedded-opentype');
+    font-weight: normal;
+    font-style: normal;
+} */
+
+@font-face {
+    font-family: 'Archivo', sans-serif;
+    src: url('https://fonts.googleapis.com/css?family=Roboto') format('embedded-opentype');
     font-weight: normal;
     font-style: normal;
 }
 
  html {
- 	font-family: sans-serif;
+ 	font-family: 'Archivo', sans-serif;
  	-ms-text-size-adjust: 100%;
  	-webkit-text-size-adjust: 100%;
  }
