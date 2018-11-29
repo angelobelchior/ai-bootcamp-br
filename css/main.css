@@ -9171,6 +9171,10 @@ img {
     padding-bottom: 50px;
 }
 
+	.contentLead h1{
+		text-align: center;
+	}
+
     .contentLead p {
     
         font-size: 130%;
